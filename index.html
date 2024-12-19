@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+</head>
+<body>
+    <h1>File Format Converter</h1>
+    <form action="{{ url_for('convert_file') }}" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload a File:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <label for="format">Convert to:</label>
+        <select name="format" id="format" required>
+            <option value="epub">EPUB</option>
+            <option value="pdf">PDF</option>
+            <option value="docx">DOCX</option>
+            <option value="html">HTML</option>
+            <option value="txt">TXT</option>
+        </select>
+        <br><br>
+        <button type="submit">Convert</button>
+    </form>
+    <p style="color: red;">{{ get_flashed_messages() | join(', ') }}</p>
+</body>
+</html>
