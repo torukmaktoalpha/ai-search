@@ -9,8 +9,8 @@ from googleapiclient.discovery import build  # Google API client
 app = Flask(__name__)
 
 # Google Custom Search API credentials
-API_KEY = "AIzaSyAqxHmq_vgakBl-a2wMU6d_cOhnJmtJs7c"  # Replace with your API key
-CSE_ID = "a28a2e731aba64494"  # Replace with your search engine ID
+API_KEY = ""  # Replace with your API key
+CSE_ID = ""  # Replace with your search engine ID
 
 def search_web(query):
     # Initialize the Google search API client
